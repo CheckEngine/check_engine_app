@@ -1,0 +1,29 @@
+{
+  "name": "8bit_inventory_launchpad",
+  "version": "1.0.0",
+  "description": "8-bit Inventory Launchpad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devjanaprime/8bitInventoryLaunchpad.git"
+  },
+  "keywords": [
+    "jquery",
+    "sql"
+  ],
+  "author": "@devjana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devjanaprime/8bitInventoryLaunchpad/issues"
+  },
+  "homepage": "https://github.com/devjanaprime/8bitInventoryLaunchpad#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "pg": "^6.1.2"
+  }
+}
