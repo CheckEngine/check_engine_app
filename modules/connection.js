@@ -6,7 +6,7 @@ if(process.env.DATABASE_URL !== undefined) {
     connString = process.env.DATABASE_URL;
     pg.defaults.ssl = true;
 } else {
-    connString = 'postgres://localhost:5432/engineChecker';
+    connString = 'postgres://localhost:5432/car-codes';
 }
 
 console.log("connString set to: ", connString);
