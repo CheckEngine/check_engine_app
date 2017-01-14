@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   init();
 });
 
@@ -7,12 +8,21 @@ var init = function() {
   getCodeInfo();
 }; // end init
 
-var getCodeInfo = function() {
+var getCodeInfo = function(event) {
   console.log('in getCodeInfo');
+  //prevent page refresh
+  event.preventDefault();
+  //receive code from user input
+  //var codeIn = 'P0135';
+  var codeIn = $('#codeIn').val();
+  console.log(codeIn);
+  //construct urlString
+  urlString = '/obds/' + codeIn;
+  console.log(urlString);
   //set get route
   $.ajax({
     type: 'GET',
-    url: '/obds',
+    url: urlString,
     success: function(response) {
       console.log(response);
     }, // end success
