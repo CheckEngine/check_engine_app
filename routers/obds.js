@@ -59,7 +59,7 @@ router.get( '/', function( req, res ){
       //if there was an error, log it
       console.log(err);
     } else {
-      var query = client.query('SELECT * FROM items ORDER BY name ASC');
+      var query = client.query('SELECT * FROM codes');
       query.on('row', function(row) {
         items.push(row);
       }); // end query.on

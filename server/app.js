@@ -14,5 +14,5 @@ app.use( express.static( 'public' ) );
 var index = require('../routers/index');
 app.use('/', index);
 
-var inventory = require('../routers/inventory');
-app.use('/inventory', inventory);
+var obds = require('../routers/obds');
+app.use('/obds', obds);
