@@ -14,7 +14,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../public/stylesheets/master.css">
+  <link rel="stylesheet" href="stylesheets/master.css">
 
 </head>
 
@@ -22,10 +22,10 @@
   <div class="container-fluid">
     <div class="header row">
       <div id="top-left-col" class="col-xs-4">
-        <img id="logo" src="IKCSlogo.png" alt="">
+        <img id="logo" src="images/IKCSlogo.png" alt="">
       </div>
       <div class="col-xs-4">
-        <img id="header-img" src="IKCSheader.png" alt="">
+        <img id="header-img" src="images/IKCSheader.png" alt="">
       </div>
       <div class="col-xs-4">
       </div>
@@ -33,7 +33,7 @@
 
   </div>
 
-  <div class="container-fluid">
+  <div class="container text-center">
     <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
       <div class="form-group">
         <label>OBD Code:</label>
@@ -43,9 +43,9 @@
     </form>
   </div>
 
-  <div class="results" id="appendToDom"></div>
+  <div class="results text-center" id="appendToDom"></div>
 
-  <footer class="results">
+  <footer class="results text-center">
     <button type="button" id="callFriend" class="btn">Phone A Friend</button>
     <button type="button" id="callMechanic" class="btn">Call My Mechanic</button>
     <button type="button" id="sendDiagnostic" class="btn">Send Diagnostic Message</button>
