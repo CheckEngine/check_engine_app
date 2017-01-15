@@ -73,13 +73,11 @@ body {
 #codeForm{
   padding: 40px;
 }
-
 label{
   font-weight: bold;
 }
-
 .results {
-  /*display: none;*/
+  display: none;
 }
 .wrapper {
   min-height: 85%;
