@@ -1,19 +1,28 @@
+var verbose = false;
+
 $(document).ready(function() {
   init();
 });
 
 var init = function() {
-  console.log('in init');
+  if (verbose) console.log('in init');
 }; // end init
 
-var displayResults = function() {
-  console.log('in displayResults');
-  var $el = $('#displayDiv');
-  //$el.append
+var clearForm = function() {
+  if (verbose) console.log('in clearForm');
+  $('#codeIn').val('');
+}; // end clearForm
+
+var displayResults = function(responseObject) {
+  if (verbose) console.log('in displayResults', responseObject);
+  var $el = $('#appendToDom');
+  $el.append('<p>' + responseObject.severity + '</p>');
+  $el.append('<p>' + responseObject.result + '</p>');
+  $el.append('<p>' + responseObject.description + '</p>');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
-  console.log('in getCodeInfo');
+  if (verbose) console.log('in getCodeInfo');
   //prevent page refresh
   event.preventDefault();
   //receive code from user input
@@ -25,11 +34,17 @@ var getCodeInfo = function(event) {
     type: 'GET',
     url: urlString,
     success: function(response) {
-      console.log(response);
-      displayResults();
+      if (verbose) console.log(response);
+      clearForm();
+      displayResults(response.response);
     }, // end success
     error: function(err) {
-      console.log(err);
+      if (verbose) console.log(err);
     } // end error
   }); // end ajax
 }; // end getCodeInfo
+
+var hideResults = function() {
+  console.log('in hideResults');
+  $('.results').hide();
+}; // end hideResults
