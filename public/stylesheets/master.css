@@ -48,10 +48,14 @@ body {
 }
 
 #logo {
-  padding: 0;
+  padding: 5px 0 0 15px;
   display: block;
   height: 100%;
   right: 0;
+}
+#homeBtn {
+  float: right;
+  margin-top: 20px;
 }
 
 #homeBtn {
