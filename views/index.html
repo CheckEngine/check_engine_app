@@ -21,31 +21,38 @@
 
 <body>
 
-    <div class="container-fluid">
-        <div class="header row text-center">
-            <div id="top-left-col" class="col-xs-4">
-                <img id="logo" src="../public/images/IKCSlogo.png" alt="">
-            </div>
-            <div class="col-xs-4">
-                <img id="header-img" src="../public/images/IKCSheader.png" alt="">
-            </div>
-            <div class="col-xs-4">
-                <button id="homeBtn" type="button" class="btn"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+    <div class="page-wrap">
+        <div class="container-fluid">
+            <div class="header row text-center">
+                <div id="top-left-col" class="col-xs-4">
+                    <img id="logo" src="images/IKCSlogo.png" alt="">
+                </div>
+                <div class="col-xs-4">
+                    <img id="header-img" src="images/IKCSheader.png" alt="">
+                </div>
+                <div class="col-xs-4">
+                    <button id="homeBtn" type="button" class="btn"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid text-center">
-        <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
-            <div class="form-group">
-                <label>OBD Code:</label>
-                <input id="codeIn" class="form-control" type="text">
-            </div>
-            <button class="btn" type="submit">Submit</button>
-        </form>
-    </div>
+        <div class="container-fluid text-center">
+            <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
+                <div class="form-group">
+                    <label>OBD Code:</label>
+                    <input id="codeIn" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                    <label>VIN Number:</label>
+                    <input class="form-control" type="text">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
 
-    <div class="results text-center" id="appendToDom"></div>
+        <div class="results text-center" id="appendToDom"></div>
+
+    </div>
 
     <div id="disclaimerModal" class="modal fade">
         <div class="modal-dialog" role="document">
@@ -67,6 +74,8 @@
             </div>
         </div>
     </div>
+
+    <div class=""></div>
 
     <footer class="results text-center">
         <button type="button" id="callFriend" class="btn">Phone A Friend</button>
