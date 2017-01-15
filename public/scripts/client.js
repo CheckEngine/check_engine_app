@@ -24,6 +24,11 @@ var displayResults = function(responseObject) {
   $el.children().last().addClass(getSeverityClass(responseObject.severity));
   $el.append('<p id="result">' + responseObject.result + '</p>');
   $el.append('<p id="description">' + responseObject.description + '</p>');
+  console.log('result-->', responseObject.result);
+  var result = responseObject.result;
+  result = encodeURI(result);
+  console.log('result after replace-->', result);
+  $el.append('<a target="_blank" href="https://www.google.com/#q='+result+'"><button class="btn">Learn More</button></a>');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
