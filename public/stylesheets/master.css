@@ -62,7 +62,7 @@ body {
   background-color: rgba(255, 0, 0, 0);
   border: none;
 }
-#homeBtn:hover {
+#homeBtn:hover, #homeBtn:active:focus:visited, #homeBtn:active:focus, #homeBtn:focus {
   color: #C1B747;
 }
 
