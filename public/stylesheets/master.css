@@ -28,7 +28,7 @@ body {
   border: 0.5px solid black;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: #1A5F91;
   color: #F7EB5B;
 }
