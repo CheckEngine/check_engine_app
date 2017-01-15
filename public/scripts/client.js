@@ -20,7 +20,7 @@ var clearForm = function() {
 var displayResults = function(responseObject) {
   if (verbose) console.log('in displayResults', responseObject);
   var $el = $('#appendToDom');
-  $el.append('<p id="serverity">' + responseObject.severity + '</p>');
+  $el.append('<p id="severity">' + responseObject.severity + '</p>');
   $el.children().last().addClass(getSeverityClass(responseObject.severity));
   $el.append('<p id="result">' + responseObject.result + '</p>');
   $el.append('<p id="description">' + responseObject.description + '</p>');

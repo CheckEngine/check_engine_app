@@ -86,12 +86,13 @@ label{
 }
 
 #severity {
-
+  max-width: 30%;
+  font-size: 25px;
+  margin: 40px auto;
 }
-
 .yellow {
   padding: 10px;
-  margin: 10px, auto;
+  margin: 10px auto;
   border: 1px solid #ECB113;
   color: black;
   background-color: #EDD79A;
@@ -99,7 +100,7 @@ label{
 
 .green {
   padding: 10px;
-  margin: 10px, auto;
+  margin: 10px auto;
   border: 1px solid #266826;
   color: black;
   background-color: #78BF78;
@@ -107,7 +108,7 @@ label{
 
 .red {
   padding: 10px;
-  margin: 10px, auto;
+  margin: 10px auto;
   border: 1px solid #A50606;
   color: black;
   background-color: #B27474;
