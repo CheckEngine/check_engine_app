@@ -2,6 +2,8 @@ var verbose = false;
 
 $(document).ready(function() {
   init();
+  //event listeners
+  $('#homeBtn').on('click', goHome);
 });
 
 var init = function() {
@@ -45,7 +47,15 @@ var getCodeInfo = function(event) {
   }); // end ajax
 }; // end getCodeInfo
 
+var goHome = function() {
+  console.log('in goHome');
+  $('.results').hide();
+  $('#codeForm').show();
+}; // end goHome
+
 var showResultDivs = function() {
   console.log('in showResultDivs');
   $('.results').show();
+  $('#codeForm').hide();
+  $('#appendToDom').empty();
 }; // end showResultDivs
