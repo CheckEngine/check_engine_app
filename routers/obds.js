@@ -12,7 +12,6 @@ var connString = require( '../modules/connection' );
 // get all items in the inventory
 router.get( '/:code?', function( req, res ){
   var codeIn = req.params.code;
-  var response = [];
   // get all items in the table and return them to client
   pg.connect(connString, function(err, client, done) {
     if (err) {
@@ -21,12 +20,11 @@ router.get( '/:code?', function( req, res ){
     } else {
       var query = client.query('SELECT * FROM codes WHERE code = $1', [codeIn]);
       query.on('row', function(row) {
-        response.push(row);
+        res.send({response: row});
       }); // end query.on
       query.on( 'end', function() {
         //disconnect from database
         done();
-        res.send({response: response});
       }); // end query end
     } // end else
   }); // end pg connect

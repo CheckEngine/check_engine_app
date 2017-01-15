@@ -6,23 +6,27 @@ var init = function() {
   console.log('in init');
 }; // end init
 
+var displayResults = function() {
+  console.log('in displayResults');
+  var $el = $('#displayDiv');
+  //$el.append
+}; // end displayResults
+
 var getCodeInfo = function(event) {
   console.log('in getCodeInfo');
   //prevent page refresh
   event.preventDefault();
   //receive code from user input
-  //var codeIn = 'P0135';
   var codeIn = $('#codeIn').val();
-  console.log(codeIn);
   //construct urlString
   urlString = '/obds/' + codeIn;
-  console.log(urlString);
   //set get route
   $.ajax({
     type: 'GET',
     url: urlString,
     success: function(response) {
       console.log(response);
+      displayResults();
     }, // end success
     error: function(err) {
       console.log(err);
