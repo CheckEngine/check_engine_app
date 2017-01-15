@@ -4,6 +4,8 @@ $(document).ready(function() {
   init();
   //event listeners
   $('#homeBtn').on('click', goHome);
+  //show disclaimer modal
+  $('#disclaimerModal').modal('show');
 });
 
 var init = function() {

@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Engine Checker</title>
-  <script src="vendors/jquery-3.0.0.min.js" charset="utf-8"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="scripts/client.js" charset="utf-8"></script>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="../public/stylesheets/master.css">
+    <meta charset="utf-8">
+    <title>Engine Checker</title>
+    <script src="vendors/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/master.css">
 
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="header row">
-      <div id="top-left-col" class="col-xs-4">
-        <img id="logo" src="../public/images/IKCSlogo.png" alt="">
-      </div>
-      <div class="col-xs-4">
-        <img id="header-img" src="../public/images/IKCSheader.png" alt="">
-      </div>
-      <div class="col-xs-4">
-      </div>
+
+    <div class="container-fluid">
+        <div class="header row text-center">
+            <div id="top-left-col" class="col-xs-4">
+                <img id="logo" src="images/IKCSlogo.png" alt="">
+            </div>
+            <div class="col-xs-4">
+                <img id="header-img" src="images/IKCSheader.png" alt="">
+            </div>
+            <div class="col-xs-4">
+                <button id="homeBtn" type="button" class="btn"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+            </div>
+        </div>
     </div>
 
-  </div>
+    <div class="container-fluid text-center">
+        <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
+            <div class="form-group">
+                <label>OBD Code:</label>
+                <input id="codeIn" class="form-control" type="text">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
 
-  <div class="container text-center">
-    <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
-      <div class="form-group">
-        <label>OBD Code:</label>
-        <input id="codeIn" class="form-control" type="text">
-      </div>
-      <button class="btn" type="submit">Submit</button>
-    </form>
-  </div>
+    <div class="results text-center" id="appendToDom"></div>
 
-  <div class="results text-center" id="appendToDom"></div>
+    <div id="disclaimerModal" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Disclaimer and User Agreement</h4>
+                </div>
+                <div class="modal-body">
+                    <p>...legal jargon....this app is not a replacement for common sense or car maintenance...yadda, yadda, yadda...legal...legal...legal.......</p>
+                    <p>Marshmallow halvah donut. Sesame snaps toffee ice cream tiramisu halvah. Pastry wafer gingerbread oat cake cupcake jujubes jelly-o chocolate fruitcake. Fruitcake soufflé candy sugar plum gummi bears bear claw jelly beans muffin wafer. Cheesecake tart tart cake croissant sugar plum soufflé. Apple pie dessert danish jujubes liquorice. Tart soufflé dragée tootsie roll soufflé.</p>
+                    <p>Gingerbread pie cake lollipop pastry. Chocolate bar tiramisu pastry jelly beans icing muffin gummi bears. Halvah chocolate tart pie sugar plum. Tootsie roll tart biscuit chocolate cake. Donut powder toffee. Jelly icing topping. Halvah icing sweet muffin wafer bonbon caramels sweet roll. Sesame snaps muffin cake dragée.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <footer class="results text-center">
-    <button type="button" id="callFriend" class="btn">Phone A Friend</button>
-    <button type="button" id="callMechanic" class="btn">Call My Mechanic</button>
-    <button type="button" id="sendDiagnostic" class="btn">Send Diagnostic Message</button>
-    <button id="homeBtn" type="button" class="btn"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-  </footer>
+    <footer class="results text-center">
+        <button type="button" id="callFriend" class="btn">Phone A Friend</button>
+        <button type="button" id="callMechanic" class="btn">Call My Mechanic</button>
+        <button type="button" id="sendDiagnostic" class="btn">Send Diagnostic Message</button>
+    </footer>
 
 </body>
+
 </html>

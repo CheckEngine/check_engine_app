@@ -72,3 +72,10 @@ footer {
   margin: 0;
   border-top: 1px solid #130c50;
 }
+/* -- MODAL -- */
+.modal {
+  top: 10%;
+}
+.modal-header {
+  background-color: #f5ed8d;
+}
