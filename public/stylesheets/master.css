@@ -47,6 +47,7 @@ body {
   padding: 0;
   display: block;
   height: 100%;
+  right: 0;
 }
 
 .col-xs-4>#header-img{
@@ -54,7 +55,7 @@ body {
 }
 
 #codeForm{
-
+  padding: 40px;
 }
 
 .results {
