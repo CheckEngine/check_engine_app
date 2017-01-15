@@ -1,0 +1,30 @@
+
+
+/*gradient top (dark blue) #130C50
+Gradient bottom (teal) #2483C9
+Button color #130C50
+Button hover #2483C9
+Button text #F7EB5B
+
+Red text #F30A0A
+Yellow text #ECB113
+Green text #0ADD0A*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+
+.header {
+  background-color: black;
+}
+
+
+.logo {
+
+}
+
+.btn-default {
+
+}

@@ -14,18 +14,26 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="stylesheets/css/master.css">
+    <link rel="stylesheet" href="master.css">
+
   </head>
+
+
   <body>
-    <div class="container text-center">
-      <h1>Engine Checker</h1>
+    <div class="container-fluid">
+      <div class="header">
+        <h1>Engine Checker</h1>
+      </div>
+
       <form id="codeForm" class="form-inline" onsubmit="getCodeInfo(event)">
         <div class="form-group">
           <label>OBD Code:</label>
           <input id="codeIn" class="form-control" type="text">
         </div>
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-default" type="submit">Submit</button>
       </form>
+    </div>
+
 
       <div id="appendToDom"></div>
 
@@ -35,6 +43,5 @@
        <button type="button" id="sendDiagnostic" class="btn btn-default">Send Diagnostic Message</button>
      </footer>
 
-    </div>
   </body>
 </html>
