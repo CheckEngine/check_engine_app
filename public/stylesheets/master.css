@@ -47,6 +47,10 @@ body {
   padding-left: 0;
 }
 
+p {
+  padding: 20px;
+}
+
 #logo {
   padding: 5px 0 0 15px;
   display: block;
