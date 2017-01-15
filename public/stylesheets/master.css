@@ -72,11 +72,29 @@ body {
 
 label{
   font-weight: bold;
+  padding-left: 15px;
+}
+
+#submit-btn {
+
 }
 
 .results {
-  /*display: none;*/
+  display: none;
 }
+
+#severity {
+
+}
+
+#result {
+
+}
+
+#description {
+
+}
+
 .wrapper {
   min-height: 85%;
   height: auto !important;
