@@ -78,18 +78,22 @@ footer {
   background: linear-gradient(#130C50, #2483C9);
   margin: 0;
   border-top: 1px solid #130c50;
+  height: 80px;
 }
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -35px;
+  margin-bottom: -80px;
 }
 .page-wrap:after {
   content: "";
   display: block;
 }
 .site-footer, .page-wrap:after {
-  height: 35px;
+  height: 80px;
+}
+footer button.btn {
+  margin: 25px 10px;
 }
 /* -- MODAL -- */
 .modal {
