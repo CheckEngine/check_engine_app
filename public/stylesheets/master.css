@@ -18,29 +18,57 @@ body {
 .container-fluid {
   padding: 0;
 }
+
+.btn {
+  background-color: #2483C9;
+  color: #F7EB5B;
+}
+
+.btn:hover {
+  background-color: #130C50;
+  color: #F7EB5B;
+}
+
 .header {
   color: #F7EB5B;
   background: #130C50;
   background: -webkit-linear-gradient(#130C50, #2483C9);
   background: -moz-linear-gradient(#130C50, #2483C9);
   background: linear-gradient(#130C50, #2483C9);
-
   margin: 0;
-  padding: 5px;
+  border-bottom: 1px solid #130c50;
 }
 
-.logo {
+.header>.col-xs-4{
+  padding-left: 0;
+}
+
+#logo {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.col-xs-4>#header-img{
+  padding-top: 5px;
+}
+
+#codeForm{
 
 }
 
-.btn-default {
+.results {
 
-}
-
-/*.results {
-  display: none;
+  /*display: none;*/
 }
 
 footer {
-  display: none;
-}*/
+  /*display: none;*/
+  color: #F7EB5B;
+  background: #130C50;
+  background: -webkit-linear-gradient(#130C50, #2483C9);
+  background: -moz-linear-gradient(#130C50, #2483C9);
+  background: linear-gradient(#130C50, #2483C9);
+  margin: 0;
+  border-top: 1px solid #130c50;
+}
