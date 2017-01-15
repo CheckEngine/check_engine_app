@@ -1,27 +1,28 @@
+var verbose = false;
+
 $(document).ready(function() {
   init();
 });
 
 var init = function() {
-  console.log('in init');
+  if (verbose) console.log('in init');
 }; // end init
 
 var clearForm = function() {
-  console.log('in clearForm');
-  $('#codeIn').val(''); 
+  if (verbose) console.log('in clearForm');
+  $('#codeIn').val('');
 }; // end clearForm
 
 var displayResults = function(responseObject) {
-  console.log('in displayResults', responseObject);
+  if (verbose) console.log('in displayResults', responseObject);
   var $el = $('#appendToDom');
-  console.log($el);
   $el.append('<p>' + responseObject.severity + '</p>');
   $el.append('<p>' + responseObject.result + '</p>');
   $el.append('<p>' + responseObject.description + '</p>');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
-  console.log('in getCodeInfo');
+  if (verbose) console.log('in getCodeInfo');
   //prevent page refresh
   event.preventDefault();
   //receive code from user input
@@ -33,12 +34,12 @@ var getCodeInfo = function(event) {
     type: 'GET',
     url: urlString,
     success: function(response) {
-      console.log(response);
+      if (verbose) console.log(response);
       clearForm();
       displayResults(response.response);
     }, // end success
     error: function(err) {
-      console.log(err);
+      if (verbose) console.log(err);
     } // end error
   }); // end ajax
 }; // end getCodeInfo
