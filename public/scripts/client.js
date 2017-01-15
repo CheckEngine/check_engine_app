@@ -43,3 +43,8 @@ var getCodeInfo = function(event) {
     } // end error
   }); // end ajax
 }; // end getCodeInfo
+
+var hideResults = function() {
+  console.log('in hideResults');
+  $('.results').hide();
+}; // end hideResults
