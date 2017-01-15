@@ -6,10 +6,13 @@ var init = function() {
   console.log('in init');
 }; // end init
 
-var displayResults = function() {
-  console.log('in displayResults');
-  var $el = $('#displayDiv');
-  //$el.append
+var displayResults = function(responseObject) {
+  console.log('in displayResults', responseObject);
+  var $el = $('#appendToDom');
+  console.log($el);
+  $el.append('<p>' + responseObject.severity + '</p>');
+  $el.append('<p>' + responseObject.result + '</p>');
+  $el.append('<p>' + responseObject.description + '</p>');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
@@ -26,7 +29,7 @@ var getCodeInfo = function(event) {
     url: urlString,
     success: function(response) {
       console.log(response);
-      displayResults();
+      displayResults(response.response);
     }, // end success
     error: function(err) {
       console.log(err);
