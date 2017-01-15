@@ -10,6 +10,8 @@ $(document).ready(function() {
 
 var init = function() {
   if (verbose) console.log('in init');
+  //set VIN
+  $('#vinIn').val('1HGCM82633A004352');
 }; // end init
 
 var clearForm = function() {
