@@ -88,7 +88,7 @@ label{
 #severity {
   max-width: 30%;
   font-size: 25px;
-  margin: 40px auto;
+  margin: 100px auto 40px;
 }
 .yellow {
   padding: 10px;
@@ -115,12 +115,13 @@ label{
 }
 
 #result {
-  margin: 10px, auto;
-
+  margin: 10px auto;
+  font-size: 22px;
 }
 
 #description {
-  margin: 10px, auto;
+  margin: 30px 50px;
+  font-size: 18px;
 }
 
 .wrapper {
