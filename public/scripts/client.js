@@ -20,9 +20,9 @@ var clearForm = function() {
 var displayResults = function(responseObject) {
   if (verbose) console.log('in displayResults', responseObject);
   var $el = $('#appendToDom');
-  $el.append('<p>' + responseObject.severity + '</p>');
-  $el.append('<p>' + responseObject.result + '</p>');
-  $el.append('<p>' + responseObject.description + '</p>');
+  $el.append('<p id="serverity">' + responseObject.severity + '</p>');
+  $el.append('<p id="result">' + responseObject.result + '</p>');
+  $el.append('<p id="description">' + responseObject.description + '</p>');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
