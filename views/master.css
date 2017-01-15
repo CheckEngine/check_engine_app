@@ -1,0 +1,46 @@
+
+
+/*gradient top (dark blue) #130C50
+Gradient bottom (teal) #2483C9
+Button color #130C50
+Button hover #2483C9
+Button text #F7EB5B
+
+Red text #F30A0A
+Yellow text #ECB113
+Green text #0ADD0A*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+.container-fluid {
+  padding: 0;
+}
+.header {
+  color: #F7EB5B;
+  background: #130C50;
+  background: -webkit-linear-gradient(#130C50, #2483C9);
+  background: -moz-linear-gradient(#130C50, #2483C9);
+  background: linear-gradient(#130C50, #2483C9);
+
+  margin: 0;
+  padding: 5px;
+}
+
+.logo {
+
+}
+
+.btn-default {
+
+}
+
+.results {
+  display: none;
+}
+
+footer {
+  display: none;
+}
