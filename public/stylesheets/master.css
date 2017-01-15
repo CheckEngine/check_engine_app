@@ -75,10 +75,53 @@ body {
 }
 label{
   font-weight: bold;
+  padding-left: 15px;
+}
+
+#submit-btn {
+
 }
 .results {
   display: none;
 }
+
+#severity {
+
+}
+
+.yellow {
+  padding: 10px;
+  margin: 10px, auto;
+  border: 1px solid #ECB113;
+  color: black;
+  background-color: #EDD79A;
+}
+
+.green {
+  padding: 10px;
+  margin: 10px, auto;
+  border: 1px solid #266826;
+  color: black;
+  background-color: #78BF78;
+}
+
+.red {
+  padding: 10px;
+  margin: 10px, auto;
+  border: 1px solid #A50606;
+  color: black;
+  background-color: #B27474;
+}
+
+#result {
+  margin: 10px, auto;
+
+}
+
+#description {
+  margin: 10px, auto;
+}
+
 .wrapper {
   min-height: 85%;
   height: auto !important;
