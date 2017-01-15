@@ -29,6 +29,9 @@ var displayResults = function(responseObject) {
   result = encodeURI(result);
   console.log('result after replace-->', result);
   $el.append('<a target="_blank" href="https://www.google.com/#q='+result+'"><button class="btn">Learn More</button></a>');
+  //set link attr of sendDiagnosticLink in footer
+  //sms:/* phone number here */?body=/* body text here */
+  // $('#sendDiagnosticLink').attr('href', 'sms://1112221234:body="'+result+'"');
 }; // end displayResults
 
 var getCodeInfo = function(event) {
