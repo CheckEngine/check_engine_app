@@ -36,6 +36,7 @@ var getCodeInfo = function(event) {
     success: function(response) {
       if (verbose) console.log(response);
       clearForm();
+      showResultDivs();
       displayResults(response.response);
     }, // end success
     error: function(err) {
@@ -44,7 +45,7 @@ var getCodeInfo = function(event) {
   }); // end ajax
 }; // end getCodeInfo
 
-var hideResults = function() {
-  console.log('in hideResults');
-  $('.results').hide();
-}; // end hideResults
+var showResultDivs = function() {
+  console.log('in showResultDivs');
+  $('.results').show();
+}; // end showResultDivs
