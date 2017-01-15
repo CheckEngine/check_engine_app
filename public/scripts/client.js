@@ -6,6 +6,11 @@ var init = function() {
   console.log('in init');
 }; // end init
 
+var clearForm = function() {
+  console.log('in clearForm');
+  $('#codeIn').val(''); 
+}; // end clearForm
+
 var displayResults = function(responseObject) {
   console.log('in displayResults', responseObject);
   var $el = $('#appendToDom');
@@ -29,6 +34,7 @@ var getCodeInfo = function(event) {
     url: urlString,
     success: function(response) {
       console.log(response);
+      clearForm();
       displayResults(response.response);
     }, // end success
     error: function(err) {
