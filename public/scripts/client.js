@@ -1,11 +1,9 @@
 $(document).ready(function() {
-
   init();
 });
 
 var init = function() {
   console.log('in init');
-  getCodeInfo();
 }; // end init
 
 var getCodeInfo = function(event) {
