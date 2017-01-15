@@ -11,7 +11,7 @@ Yellow text #ECB113
 Green text #0ADD0A*/
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Pavanam", sans-serif;
   background-color: white;
 }
 
@@ -22,10 +22,11 @@ body {
 .btn {
   background-color: #2483C9;
   color: #F7EB5B;
+  border: 0.5px solid black;
 }
 
 .btn:hover {
-  background-color: #130C50;
+  background-color: #1A5F91;
   color: #F7EB5B;
 }
 
@@ -50,12 +51,24 @@ body {
   right: 0;
 }
 
+#homeBtn {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+}
+#homeBtn:hover {
+  color: #C1B747;
+}
+
 .col-xs-4>#header-img{
   padding-top: 5px;
 }
 
 #codeForm{
   padding: 40px;
+}
+
+label{
+  font-weight: bold;
 }
 
 .results {
