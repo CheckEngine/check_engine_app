@@ -10,6 +10,9 @@ Red text #F30A0A
 Yellow text #ECB113
 Green text #0ADD0A*/
 
+html, body {
+  height: 100%;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: white;
@@ -60,9 +63,13 @@ body {
 .results {
   /*display: none;*/
 }
-
+.wrapper {
+  min-height: 85%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px; // the bottom margin is the negative value of the footer's height
+}
 footer {
-  /*display: none;*/
   color: #F7EB5B;
   background: #130C50;
   background: -webkit-linear-gradient(#130C50, #2483C9);
@@ -70,6 +77,18 @@ footer {
   background: linear-gradient(#130C50, #2483C9);
   margin: 0;
   border-top: 1px solid #130c50;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -35px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 35px;
 }
 /* -- MODAL -- */
 .modal {
